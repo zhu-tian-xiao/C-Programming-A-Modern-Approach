@@ -1,8 +1,10 @@
 #include <stdio.h>
-int main() 
+int main()
 {
     // 错误的写法
     char *p;
+    // This assignment doesn’t copy the characters in "abc"; it merely makes p point to
+    // the first character of the string.
     p = "abc";
     *p = 'd';
     char *f = p;
@@ -17,6 +19,4 @@ int main()
     {
         printf("%c\n", *p++);
     }
-    
-    
 }
