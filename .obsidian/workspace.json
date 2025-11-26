@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ch13.md",
+                "file": "ch5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ch13"
+              "title": "ch5"
             }
           }
         ],
@@ -101,7 +101,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -151,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ch2.md",
+                "file": "ch5.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for ch2"
+              "title": "Backlinks for ch5"
             }
           },
           {
@@ -213,54 +213,54 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ch2.md",
+                "file": "ch5.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ch2"
+              "title": "Outline of ch5"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "bases:创建新数据库": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
   "active": "bdf2355931638624",
   "lastOpenFiles": [
-    "ch13/p287_2",
-    "ch13/p287_2.c",
-    "ch13/p287_1",
-    "ch13/p287_1.c",
-    "ch13/p285_1",
-    "ch13/p285_1.c",
-    "ch13/p284_1",
-    "ch13/p284_1.c",
-    "ch13/p280_3",
-    "ch13/p280_3.c",
-    "ch13/p280_2",
+    "ch6/p103_1",
+    "ch6/p103_1.c",
+    "ch6/p102_1",
+    "ch6/p102_1.c",
+    "ch6",
+    "ch5/test.cpp",
+    "ch5/p89_1",
+    "ch5/p89_1.c",
+    "ch5/p85_1",
+    "ch5/p85_1.c",
+    "ch5",
+    "ch4.md",
     "ch5.md",
-    "ch9.md",
+    "ch3.md",
+    "ch2.md",
     "ch13.md",
+    "ch9.md",
     "ch10.md",
     "ch7.md",
-    "ch4.md",
-    "ch2.md",
-    "ch3.md",
     "README.md"
   ]
 }
