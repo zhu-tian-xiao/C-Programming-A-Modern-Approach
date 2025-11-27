@@ -1,4 +1,5 @@
 #include <stdio.h>
+// n是最多存储的str的长度，不包括\0
 int read_line(char str[], int n)
 {
     int ch = 0;
@@ -17,7 +18,7 @@ int read_line(char str[], int n)
 int main()
 {
     char str[10];
-    int length = read_line(str, sizeof(str) / sizeof(char));
-    printf("the str: %s", str);
-    printf(" the length: %d", length);
+    int length = read_line(str, sizeof(str) / sizeof(char) - 1);
+    printf("the str: %s\n", str);
+    printf("the length: %d\n", length);
 }
