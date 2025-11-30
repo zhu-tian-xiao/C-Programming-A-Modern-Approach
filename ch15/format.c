@@ -1,63 +1,122 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 #define formatLineLength 60
+#define wordMaxLength 10
+/**
+ * 读取word并且返回line下一个待读取的位置
+ */
+char *readWord(char *word, char *line)
+{
 
-char* readWord(char* word, char* line){
-    // if *word == " ", 跳过直到不是
-    // 如果*word == '字母'，看现在已经赋值了多少个字母，如果已经>=10
-    // 将word[9] == '*'， 跳转word直到是空格
-    // 如果*word == '\0'，直接返回'\0'
-
-    const char* p = word;
+    const char *p = word;
     bool flag = false;
     while (*line)
     {
         if (*line == ' ' && !flag)
         {
-            // jump to not ' '
             line++;
             continue;
         }
-        // 超过word的限制
-        if (p - word >= 10)
+        if (*line == ' ' && flag)
         {
-            word[9] = '*';
+            *word = '\0';
+            return line;
+        }
+
+        if (word - p < 10)
+        {
+            flag = true;
+            *word++ = *line++;
+            continue;
+        }
+
+        // 超过word的限制
+        if (word - p >= 10)
+        {
+            *word = '\0';
+            *(word - 1) = '*';
             // jump to ' ' or '\0'
-            while (*line != ' ' && *line != '\0')
+            while (*line != ' ' && *line)
             {
                 line++;
             }
             return line;
-        } else {
-            flag = true;
-            *word++ = *line++;
         }
-        return line; 
+    }
+    *word = '\0';
+    return line;
+}
+
+void printFormatArticle(char (*formatArticle)[formatLineLength + 1], char (*formatArticleEnd)[formatLineLength + 1])
+{
+    while (formatArticle <= formatArticleEnd)
+    {
+        printf("%s\n", *formatArticle);
+        formatArticle++;
     }
     
 }
+
 int main()
 {
     char line[100];
-    char word[10];
+    char word[wordMaxLength + 1];
     char formatLine[formatLineLength + 1];
-    FILE* fp;
+    char formatArticle[20][formatLineLength + 1];
+    FILE *fp;
     fp = fopen("quote", "r");
     if (!fp)
     {
         printf("can't open the file");
     }
 
+    char* formatLineNext = formatLine;
+    const char* formatLineEnd = formatLine + formatLineLength;
+    char (*formatArticleNext)[formatLineLength + 1] = formatArticle;
+    bool first = true;
     while (fgets(line, sizeof(line), fp) != NULL)
     {
-        // 读到一行带有\0的字符串line
-        // 从中取出第一个单词
-        char* p = readWord(word, line);
-        // 放入formatLine
-        // 将指针A移动到
-    }
-    
-    
+        line[strcspn(line, "\r\n")] = '\0';
+        printf("%s\n", line);
+        char *p = line;
+        while ((p = readWord(word, p)))
+        {
+            printf("%s\n", word);
 
+            if (formatLineEnd - formatLineNext < sizeof(word))
+            {
+                // formatLine[formatLineLength] = '\0';
+                strcpy(*formatArticleNext, formatLine);
+                formatLineNext = formatLine;
+
+                formatArticleNext++;
+                strncpy(formatLineNext, word, sizeof(word));
+                formatLineNext += strlen(word);
+            } else {
+                if (first)
+                {
+                    strncpy(formatLineNext, word, sizeof(word));
+                    first = false;
+                    formatLineNext += strlen(word);
+                } else {
+                    *formatLineNext++ = ' ';
+                    strncpy(formatLineNext, word, sizeof(word));
+                    formatLineNext += strlen(word);
+                }
+            }
+            
+            if (!*p)
+            {
+                break;
+            }
+            
+        }
+        memset(line, 0, sizeof(line));
+    }
+    strcpy(*formatArticleNext, formatLine);
+
+    printf("..................\n");
+    printFormatArticle(formatArticle, formatArticleNext);
 }
