@@ -129,7 +129,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -247,7 +247,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "ch7 的大纲"
+              "title": "Outline of ch7"
             }
           }
         ],
@@ -259,29 +259,29 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "bases:创建新数据库": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
   "active": "81c1d3f0a72b1120",
   "lastOpenFiles": [
-    "ch7/p141_1",
-    "ch7/p141_1.c",
-    "ch7/p138_1",
-    "ch7/p138_1.c",
-    "ch7/p131_1",
-    "ch7/p131_1.c",
-    "ch7/p126_1",
-    "ch7/p126_1.c",
+    "ch8/programming09",
+    "ch8/programming09.c",
+    "ch8/programming07",
+    "ch8/programming07.c",
+    "ch8/programming02",
+    "ch8/programming02.c",
+    "ch8/programming01",
+    "ch8/programming01.c",
+    "ch8/p169_2.c",
+    "ch8/p169_1.c",
+    "ch8/p162_1.c",
     "ch15.md",
-    "ch15/format",
-    "ch15/format.c",
-    "ch15/quote",
     "ch14.md",
     "ch7.md",
     "ch13.md",
