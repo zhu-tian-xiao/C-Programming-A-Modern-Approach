@@ -104,9 +104,37 @@
               "icon": "lucide-file",
               "title": "ch7"
             }
+          },
+          {
+            "id": "7b8f1fb27824621c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ch8.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ch8"
+            }
+          },
+          {
+            "id": "74031ed1380fdcd2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ch22.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ch22"
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -241,13 +269,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ch7.md",
+                "file": "ch22.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ch7"
+              "title": "Outline of ch22"
             }
           }
         ],
@@ -268,22 +296,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "81c1d3f0a72b1120",
+  "active": "74031ed1380fdcd2",
   "lastOpenFiles": [
-    "ch8/programming09",
-    "ch8/programming09.c",
-    "ch8/programming07",
-    "ch8/programming07.c",
-    "ch8/programming02",
-    "ch8/programming02.c",
-    "ch8/programming01",
-    "ch8/programming01.c",
-    "ch8/p169_2.c",
-    "ch8/p169_1.c",
-    "ch8/p162_1.c",
+    "ch22/p541_1/新建 文本文档.txt",
+    "ch22/p541_1/in.txt",
+    "ch22/p541_1/a.txt",
+    "ch22/p541_1/out.dat",
+    "ch22/p541_1/in.dat",
+    "ch22/p541_1/demo",
+    "ch22/p541_1/a.out",
+    "ch22/p541_1/demo.c",
+    "ch22/p541_1",
+    "ch22/p561",
+    "ch22/material/out.dat",
+    "ch8.md",
+    "ch22.md",
+    "ch7.md",
     "ch15.md",
     "ch14.md",
-    "ch7.md",
     "ch13.md",
     "ch5.md",
     "ch4.md",

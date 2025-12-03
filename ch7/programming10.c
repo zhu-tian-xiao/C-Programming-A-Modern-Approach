@@ -15,4 +15,4 @@ int main()
     }
     printf("Your sentence contains %d vowels.\n", count);
     
-}
+}   
