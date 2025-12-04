@@ -23,7 +23,7 @@ int main()
         printf("%.2f", 142.5 + (income - 5250) * 0.05);
     } else
     {
-        printf("%.2f", 230 + (income - 70000) * 0.06);
+        printf("%.2f", 230 + (income - 7000) * 0.06);
     }
     printf("\n");
     
