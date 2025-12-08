@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// 将s2复制到s1
 char* my_strcat(char* s1, const char* s2)
 {
     char *s = s1;
