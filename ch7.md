@@ -1,9 +1,36 @@
 # Basic Types
 ## Integer Types
+numeric types: integer types and floating types
+integer type: signed and unsigned 
+
+实际上只有6种integer types: short int, unsigned short int, int, unsigned int, long int, unsigned long int
+
+| Type               | Smallest Value             | Largest Value              |
+| ------------------ | -------------------------- | -------------------------- |
+| short int          | –32,768                    | 32,767                     |
+| unsigned short int | 0                          | 65,535                     |
+| int                | –2,147,483,648             | 2,147,483,647              |
+| unsigned int       | 0                          | 4,294,967,295              |
+| long int           | –9,223,372,036,854,775,808 | 9,223,372,036,854,775,807  |
+| unsigned long int  | 0                          | 18,446,744,073,709,551,615 |
+
 ### Integer Types in C99
 long long和unsigned long long 都至少需要64位，这是标准要求
-### Integer Constants
 
+standard signed integer types: short int, int, long int, and long long int types (along with the signed char type)
+standard unsigned integer types: unsigned short int, unsigned int, unsigned long int, and unsigned long long int types (along with the unsigned char type and the `_Bool` type)
+### Integer Constants
+The type of a decimal integer constant is normally int.
+int -> long int -> **unsigned long int**
+
+octal or hexadecimal constant:
+int -> unsigned int -> long int -> unsigned long int
+### Integer Constants in C99
+The type of a decimal constant with no suffix (U, u, L, l, LL, or ll) is the “smallest” of the types int, long int, or long long int that can represent the value of that constant.
+int -> long int -> **long long int**
+
+octal or hexadecimal constant:
+int -> unsigned int -> long int -> unsigned long int -> long long int -> unsigned long long int
 ## Floating Types
 
 | type        | precision                         |

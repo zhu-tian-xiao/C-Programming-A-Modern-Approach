@@ -20,6 +20,7 @@ int main()
     }
     else
     {
+        // 这里可以用else if来避免缩进
         if (month1 < month2)
         {
             flag = true;

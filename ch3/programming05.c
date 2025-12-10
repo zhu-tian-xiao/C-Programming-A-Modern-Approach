@@ -1,4 +1,6 @@
+// FINISH
 #include <stdio.h>
+
 #define LEN 4
 
 void printNums(int nums[][LEN])
@@ -7,8 +9,9 @@ void printNums(int nums[][LEN])
     {
         for (int j = 0; j < LEN; j++)
         {
+            if (!j)
+                printf(" ");
             printf("%2d", nums[i][j]);
-            printf(" ");
         }
         printf("\n");
     }
@@ -46,9 +49,7 @@ int main()
             if (i + j == 3)
             {
                 diagonal2 += nums[i][j];
-            }
-            
-            
+            }  
         }  
     }
     

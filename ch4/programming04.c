@@ -18,5 +18,11 @@ int main()
     }
 
     // printf("In octal, your number is: %5.5o\n", number);
+    // printf("In octal, your number is: %d%d%d%d%d\n",
+    //    (number/4096)%8,
+    //    (number/512)%8,
+    //    (number/64)%8,
+    //    (number/8)%8,
+    //    number%8);
     printf("In octal, your number is: %5.5d\n", octalNumber);
 }

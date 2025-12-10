@@ -2,7 +2,7 @@
 int main(void)
 {
     float commission, value;
-    
+
     int shares;
     float price;
     printf("Enter the number of shares: ");
@@ -14,11 +14,13 @@ int main(void)
     float commission2;
     if (shares < 2000)
     {
-        commission2 = 33 + 0.01 * value;
-    } else {
+        commission2 = 33 + 0.03 * value;
+    }
+    else
+    {
         commission2 = 33 + 0.02 * value;
     }
-    
+
     if (value < 2500.00f)
         commission = 30.00f + .017f * value;
     else if (value < 6250.00f)

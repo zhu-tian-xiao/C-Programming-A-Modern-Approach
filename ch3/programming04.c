@@ -1,3 +1,4 @@
+// FINISH
 #include <stdio.h>
 int main(){
     printf("Enter phone number [(xxx) xxx-xxxx]: ");

@@ -167,12 +167,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ch22.md",
+                "file": "ch7.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ch22"
+              "title": "ch7"
             }
           }
         ],
@@ -311,13 +311,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ch22.md",
+                "file": "ch7.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ch22"
+              "title": "Outline of ch7"
             }
           }
         ],
@@ -340,17 +340,20 @@
   },
   "active": "a40277085a50cd36",
   "lastOpenFiles": [
-    "ch22/p568_1/dest.dat",
-    "ch22/p568_1/source.dat",
-    "ch22/p568_1/p568_1",
-    "ch22/p568_1/p568_1.c",
-    "ch22/p568_1",
-    "ch22/p568_2",
-    "ch22/p56",
-    "ch22/p568_1.c",
-    "ch22/p547_1/test",
-    "ch22/p547_1/example.dat",
-    "ch22/p547_1/test.c",
+    "ch7/a.out",
+    "ch6/programming10",
+    "ch6/programming10.c",
+    "ch6/programming09",
+    "ch6/programming09.c",
+    "ch6/programming08_2",
+    "ch6/programming08_2.c",
+    "ch5/programming11",
+    "ch5/programming11.c",
+    "ch5/programming08",
+    "ch5/programming08.c",
+    "ch5.md",
+    "ch4.md",
+    "ch22.md",
     "ch16.md",
     "ch15.md",
     "ch14.md",
@@ -360,10 +363,7 @@
     "ch10.md",
     "ch9.md",
     "ch8.md",
-    "ch22.md",
     "ch7.md",
-    "ch5.md",
-    "ch4.md",
     "ch3.md",
     "ch2.md",
     "README.md"
