@@ -24,6 +24,7 @@ int main(void)
         printf("%10d%10d\n", i, i * i);
         if (i % 24 == 0) {
             printf("Press Enter to continue...");
+            // 读到一个\n为止
             while (getchar() != '\n')
                 ;
         }
