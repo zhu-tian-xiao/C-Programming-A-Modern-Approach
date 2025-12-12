@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main()
 {
+    // 4 2 8 4 8 16
     printf("%lu ", sizeof(int));
     printf("%lu ", sizeof(short));
     printf("%lu ", sizeof(long));

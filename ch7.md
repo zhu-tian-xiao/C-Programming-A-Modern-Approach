@@ -31,6 +31,41 @@ int -> long int -> **long long int**
 
 octal or hexadecimal constant:
 int -> unsigned int -> long int -> unsigned long int -> long long int -> unsigned long long int
+### Reading and Writing Integers
+When reading or writing an **unsigned integer**, use the letter u, o, or x instead of d in the conversion specification.
+```c
+#include <stdio.h>
+int main()
+{
+    unsigned int u;
+    scanf("%u", &u); /* reads u in base 10 */
+    printf("%u\n", u); /* writes u in base 10 */
+    // scanf("%o", &u);   /* reads u in base 8 */
+    // printf("%o\n", u); /* writes u in base 8 */
+    // printf("%d\n", u);
+    // scanf("%x", &u);   /* reads u in base 16 */
+    // printf("%x\n", u); /* writes u in base 16 */
+    // printf("%d\n", u);
+}
+```
+When reading or writing a short integer, put the letter h in front of d, o, u, or x:
+```c
+short s;
+scanf("%hd", &s);
+printf("%hd", s);
+```
+When reading or writing a long integer, put the letter l (“ell,” not “one”) in front of d, o, u, or x:
+```c
+long l;
+scanf("%ld", &l);
+printf("%ld", l);
+```
+When reading or writing a long long integer (C99 only), put the letters ll in front of d, o, u, or x:
+```c
+long long ll;
+scanf("%lld", &ll);
+printf("%lld", ll);
+```
 ## Floating Types
 
 | type        | precision                         |
@@ -48,38 +83,54 @@ int -> unsigned int -> long int -> unsigned long int -> long long int -> unsigne
 C99的情况：
 - integer types
 	- char
-	- signed integer types
-	- unsigned integer types
+	- signed integer types: signed char, short int, int, long int, long int, long long int
+	- unsigned integer types: unsigned char, unsigned short int, unsigned int, unsigned long int, unsigned long long int, `_Bool`
 	- enumerated types
 - floating types
-	- real floating types
-	- complex types
+	- real floating types: float, double, long double
+	- complex types: float `_Complex`, double `_Complex`, long double `_Complex`
 ### Character-Handling Functions
 比如说toupper
 ### Reading and Writing Characters using scanf and printf
-跳过一个white space的方法
+在读取char之前跳过所有white space的方法
 ```c
 scanf(" %c", &ch); /* skips white space, then reads ch */
 ```
 ### Determining the Length of a Message
-
+```C
+#include <stdio.h>
+int main()
+{
+    printf("Enter a message: ");
+    int count = 0;
+    while (getchar() != '\n')
+    {
+        count++;
+    }
+    printf("Your message was %d character(s) long.\n", count);
+}
+```
 ## Type conversions
 implicit conversions
 
 explicit conversions
+
 Implicit conversions are performed in the following situations:
 - When the operands in an arithmetic or logical expression don’t have the same type. (C performs what are known as the **usual arithmetic conversions**.)
-- When the type of the expression on the right side of an assignment doesn’t match the type of the variable on the left side.
+- When the type of the expression on the right side of an **assignment** doesn’t match the type of the variable on the left side.
 - When the type of an argument in a function call doesn’t match the type of the corresponding parameter.
 - When the type of the expression in a return statement doesn’t match the function’s return type.
+在算数表达式/逻辑表达式、赋值表达式、函数调用、函数返回时可能发生隐式转换
 
 promotion： convert a character or short integer to type int
 
 rules:
-- The type of either operand is a floating type
-- Neither operand type is a floating type
+- The type of either operand is a floating type: float -> double -> long double
+- Neither operand type is a floating type: int -> unsigned int -> long int -> unsigned long int
 
-这里注意不要将unsigned int和signed int混合使用
+这里注意不要将unsigned int和signed int混合使用，因为int会被转换为unsigned int，如果int是负数，会造成意外情况
+
+
 
 ### Conversion During Assignment
 ### Implicit Conversions in C99

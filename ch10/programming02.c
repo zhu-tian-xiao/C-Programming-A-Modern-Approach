@@ -16,6 +16,8 @@ void read_cards(void);
 void analyze_hand(void);
 void print_result(void);
 
+// Ranks: 2 3 4 5 6 7 8 9 t j q k a
+// Suits: c d h s
 int main()
 {
     for (;;)

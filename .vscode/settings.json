@@ -2,5 +2,6 @@
     "files.associations": {
         "stdio.h": "c",
         "stdbool.h": "c"
-    }
+    },
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, BraceWrapping: { AfterControlStatement: false } }"
 }

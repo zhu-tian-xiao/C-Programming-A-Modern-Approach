@@ -35,4 +35,5 @@ The difference between return and exit is that exit causes program **termination
 - With regard to the previous question: Why not just define main’s return type to be void?
 - 操作系统需要main函数返回的状态码
 
-
+- Is it legal for a function f1 to call a function f2, which then calls f1?
+- Yes.
