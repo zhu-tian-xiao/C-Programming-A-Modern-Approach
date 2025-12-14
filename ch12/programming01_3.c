@@ -15,7 +15,7 @@ int main()
     while ((ch = getchar()) != '\n')
     {
         sentence[i++] = ch;
-    }
+    } 
     sentence[i] = '\0';
 
     printf("Reversal is: ");
