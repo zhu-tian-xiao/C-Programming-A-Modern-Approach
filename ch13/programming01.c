@@ -15,7 +15,7 @@ int main() {
     printf("Enter word: ");
     // fgets也可以使用但是需要修改逻辑
     // fgets(word, WORD_LEN + 1, stdin);
-    scanf("%s", word);
+    scanf("%20s", word);
     if (strlen(word) == 4) {
       break;
     }
