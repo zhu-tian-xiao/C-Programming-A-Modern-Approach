@@ -12,7 +12,6 @@ int main() {
     printf("Your sentence contains %d vowels.\n",
            compute_vowel_count(sentence));
   }
-
 }
 
 int compute_vowel_count(const char* sentence) {
