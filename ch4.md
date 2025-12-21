@@ -25,7 +25,7 @@ Implementation-Defined Behavior和undefined behavior是不同的
 side effects
 Most C operators don’t modify their operands, but some do. We say that these operators have side effects, since they **do more than just compute a value**. 
 ## Lvalues
-An lvalue (pronounced “L-value”) represents an object stored in computer memory, not a constant or the result of a computation.
+An lvalue (pronounced “L-value”) represents an **object** stored in computer memory, not a constant or the result of a computation.
 ### Increment and Decrement Operators
 For the record, the postfix versions of ++ and -- have higher precedence than unary plus and minus and are left associative. The prefix versions have the same precedence as unary plus and minus and are right associative.
 
