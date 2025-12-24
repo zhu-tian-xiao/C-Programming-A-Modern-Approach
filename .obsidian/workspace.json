@@ -188,9 +188,37 @@
               "icon": "lucide-file",
               "title": "ch17"
             }
+          },
+          {
+            "id": "4ee213a86090c0c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ch18.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ch18"
+            }
+          },
+          {
+            "id": "8211f80b7018bda7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ch19.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ch19"
+            }
           }
         ],
-        "currentTab": 12
+        "currentTab": 14
       }
     ],
     "direction": "vertical"
@@ -325,13 +353,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ch17.md",
+                "file": "ch19.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ch17"
+              "title": "Outline of ch19"
             }
           }
         ],
@@ -352,10 +380,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "57181e66764ab473",
+  "active": "8211f80b7018bda7",
   "lastOpenFiles": [
-    "ch16.md",
+    "ch18.md",
+    "ch19.md",
+    "ch18/test/test",
+    "ch18/test/test.h",
+    "ch18/test/test.c",
+    "ch18/test",
+    "ch18",
     "ch17.md",
+    "ch16.md",
     "ch16/p425_linkedlist",
     "ch16/p390/inventory",
     "ch16/p390/inventory.c",
@@ -363,16 +398,11 @@
     "ch15.md",
     "ch13.md",
     "ch13/programming02",
-    "ch13/programming02.c",
-    "ch13/remind",
     "ch11.md",
     "ch8.md",
     "ch9.md",
     "ch10.md",
     "ch22.md",
-    "ch13/remind.c",
-    "ch13/strcpy",
-    "ch13/strcpy.c",
     "ch4.md",
     "ch14.md",
     "ch7.md",
