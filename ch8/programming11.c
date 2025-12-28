@@ -1,3 +1,4 @@
+// FINISH
 #include <stdio.h>
 
 int main(void) {
@@ -6,6 +7,7 @@ int main(void) {
     int i = 0;
 
     printf("Enter phone number: ");
+    // 读取字符串到一个字符数组的方法
     while ((phone[i++] = getchar()) != '\n')
         ;
     printf("In numeric form: ");

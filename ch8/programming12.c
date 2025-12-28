@@ -1,3 +1,5 @@
+// FINISH
+// 将字符数组当作一个map使用
 #include <stdio.h>
 #include <ctype.h>
 

@@ -1,3 +1,5 @@
+// 这个版本写的过于复杂了
+// FINISH
 #include <stdio.h>
 #include <stdlib.h>
 #define N 8

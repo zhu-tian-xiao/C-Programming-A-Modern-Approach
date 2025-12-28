@@ -1,3 +1,5 @@
+// FINISH
+// 掌握通过while(ch = getchar() != '\n')获取字符串
 #include <stdio.h>
 #include <ctype.h>
 int main()

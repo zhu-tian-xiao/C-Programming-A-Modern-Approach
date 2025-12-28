@@ -1,10 +1,5 @@
 // FINISH
 #include <stdio.h>
-int main()
-{
-    double radius;
-    printf("Enter radius to calculate: ");
-    scanf("%lf", &radius);
-    double volume = radius * radius * radius * 3.14 * (4.0 / 3);
-    printf("Volume of sphere: %.2f\n", volume);
+int main() {
+  printf("Sphere volume: %.2f cubic meters\n", 4.0f / 3.0f * 3.14f * 1000);
 }

@@ -2,5 +2,14 @@ BasedOnStyle: Google
 IndentWidth: 2
 TabWidth: 2
 UseTab: Never
+
+SortIncludes: true
+IncludeBlocks: Regroup
+
+NamespaceIndentation: None
+
 BraceWrapping:
+  AfterClass: false
   AfterControlStatement: false
+  AfterFunction: false
+  AfterNamespace: false

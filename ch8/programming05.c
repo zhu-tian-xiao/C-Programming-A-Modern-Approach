@@ -1,3 +1,4 @@
+// FINISH
 /* Prints a table of compound interest */
 
 #include <stdio.h>

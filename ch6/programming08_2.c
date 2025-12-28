@@ -1,3 +1,4 @@
+// FINISH
 #include <stdio.h>
 
 // 这是不包含处理空格的简单版本

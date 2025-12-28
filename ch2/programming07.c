@@ -2,20 +2,19 @@
 #include <stdio.h>
 int main()
 {
-    int amount;
-    printf("Enter a dollar amount: ");
-    scanf("%d", &amount);
-    int remainAmount;
-    int billsCount20 = amount / 20;
-    remainAmount = amount % 20;
-    int billsCount10 = remainAmount / 10;
-    remainAmount = remainAmount % 10;
-    int billsCount05 = remainAmount / 5;
-    remainAmount = remainAmount % 5;
-    int billsCount01 = remainAmount;
-    printf("$%2d bills: %d\n", 20, billsCount20);
-    printf("$%2d bills: %d\n", 10, billsCount10);
-    printf("$%2d bills: %d\n", 5, billsCount05);
-    printf("$%2d bills: %d\n", 1, billsCount01);
+    int money = 0;
 
+    printf("Enter a dollar amount: ");
+    scanf("%d", &money);
+
+    printf("$20 bills: %d\n", money/20);
+    money -= 20 * (money/20);
+
+    printf("$10 bills: %d\n", money/10);
+    money -= 10 * (money/10);
+
+    printf(" $5 bills: %d\n", money/5);
+    money -= 5 * (money/5);
+
+    printf(" $1 bills: %d\n", money);
 }

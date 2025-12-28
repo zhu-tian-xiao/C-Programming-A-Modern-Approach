@@ -1,3 +1,4 @@
+// FINISH
 #include <stdio.h>
 
 // 这里也可以用%s解决

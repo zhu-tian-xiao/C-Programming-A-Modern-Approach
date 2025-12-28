@@ -1,3 +1,4 @@
+// FINISH
 #include <stdio.h>
 #include <stdbool.h>
 bool isAnagrams(int* words)
