@@ -1,11 +1,49 @@
-# Defining and Calling Functions
-## Function Definitions
-- Functions may not return arrays, but there are no other restrictions on the return type.
+# Functions
+## Defining and Calling Functions
+### Function Definitions
+- Functions **may not return arrays**, but there are no other restrictions on the return type.
 - Specifying that the return type is void indicates that the function doesn’t return a value.
+### Testing Whether a Number Is Prime
+```c
+/* Tests whether a number is prime */
+// p190
+
+#include <stdbool.h>
+#include <stdio.h>
+
+bool is_prime(int n);
+
+int main() {
+  printf("Enter a number: ");
+  int number;
+  scanf("%d", &number);
+  if (is_prime(number)) {
+    printf("Prime\n");
+  } else {
+    printf("Not prime\n");
+  }
+}
+
+bool is_prime(int n) {
+  if (n <= 1) {
+    return false;
+  }
+  for (int divisor = 2; divisor * divisor <= n; divisor++) {
+    if (n % divisor == 0) {
+      return false;
+    }
+  }
+  return true;
+}
+```
+## Function Declarations
+```c
+return-type function-name ( parameters ) ;
+```
 ## Arguments
 In C, arguments are **passed by value**
 ### Argument Conversions
-The compiler has encountered a prototype prior to the call. The value of each argument is **implicitly converted** to the type of the corresponding param- eter as if by assignment. For example, if an int argument is passed to a func- tion that was expecting a double, the argument is converted to double automatically.
+The compiler has encountered a prototype prior to the call. The value of each argument is **implicitly converted** to the type of the corresponding parameter as if by assignment. For example, if an int argument is passed to a function that was expecting a double, the argument is converted to double automatically.
 ### Array Arguments
 Although we can use the sizeof operator to help determine the length of an array variable, it doesn’t give the correct answer for an array parameter:
 ```c
@@ -18,8 +56,15 @@ int f(int a[])
 ```
 ## Program Termination
 ### The exit Function
+```c
+#include <stdlib.h>
+exit(0);
+exit(EXIT_SUCCESS);
+exit(EXIT_FAILURE);
+```
 The difference between return and exit is that exit causes program **termination** regardless of which function calls it.
 ## Recursion
+
 # Q & A
 - Is it legal to put a function declaration inside the body of another function?
 - yes
