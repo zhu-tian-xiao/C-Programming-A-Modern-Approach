@@ -1,3 +1,4 @@
+// FINISH
 // 利用external variables的实现
 #include <stdio.h>
 #include <stdlib.h> /* exit */

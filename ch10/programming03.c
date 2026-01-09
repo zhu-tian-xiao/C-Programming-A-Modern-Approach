@@ -1,3 +1,4 @@
+// FINISH
 /* Classifies a poker hand */
 
 #include <stdio.h>

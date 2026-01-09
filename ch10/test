@@ -1,0 +1,2 @@
+void read_cards(int num_in_rank[], int num_in_suit[]);
+void analyze_hand(int num_in_rank[], int num_in_suit[]);

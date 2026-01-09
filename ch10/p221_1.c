@@ -5,49 +5,26 @@
 int contents[STACK_SIZE];
 int top = 0;
 
-void stackOverFlow()
-{
-    puts("over flow");
-}
-void stackUnderFlow()
-{
-    puts("Under flow");
-}
-void makeEmpty()
-{
-    top = 0;
+void stack_overflow() { puts("over flow"); }
+void stack_underflow() { puts("Under flow"); }
+void makeEmpty() { top = 0; }
+
+bool isEmpty() { return top == 0; }
+
+bool isFull() { return top == STACK_SIZE; }
+
+void push(int i) {
+  if (isFull()) {
+    stack_overflow();
+  } else {
+    contents[top++] = i;
+  }
 }
 
-bool isEmpty()
-{
-    return top == 0;
-}
-
-bool isFull()
-{
-    return top == STACK_SIZE;
-}
-
-void push(int i)
-{
-    if (isFull())
-    {
-        stackOverFlow();
-    }
-    else
-    {
-        contents[top++] = i;
-    }
-}
-
-int pop()
-{
-    if (isEmpty())
-    {
-        stackUnderFlow();
-    }
-    else
-    {
-        return contents[--top];
-    }
+int pop() {
+  if (isEmpty()) {
+    stack_underflow();
+  } else {
+    return contents[--top];
+  }
 }

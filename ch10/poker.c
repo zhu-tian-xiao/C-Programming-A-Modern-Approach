@@ -1,4 +1,3 @@
-// FINISH
 /* Classifies a poker hand */
 
 #include <stdbool.h>
@@ -9,26 +8,24 @@
 #define NUM_SUITS 4
 #define NUM_CARDS 5
 
-// int num_in_rank[NUM_RANKS];
-// int num_in_suit[NUM_SUITS];
+int num_in_rank[NUM_RANKS];
+int num_in_suit[NUM_SUITS];
 bool straight, flush, four, three;
 int pairs;
 
-void read_cards(int num_in_rank[], int num_in_suit[]);
-void analyze_hand(int num_in_rank[], int num_in_suit[]);
+void read_cards(void);
+void analyze_hand(void);
 void print_result(void);
 void print_array(int array[], int n);
 int main(void) {
-  int num_in_rank[NUM_RANKS];
-  int num_in_suit[NUM_SUITS];
   for (;;) {
-    read_cards(num_in_rank, num_in_suit);
-    analyze_hand(num_in_rank, num_in_suit);
+    read_cards();
+    analyze_hand();
     print_result();
   }
 }
 
-void read_cards(int num_in_rank[], int num_in_suit[]) {
+void read_cards(void) {
   bool cards_exists[NUM_RANKS][NUM_SUITS];
   char rank_ch, suit_ch;
   int rank, suit;
@@ -147,7 +144,7 @@ void read_cards(int num_in_rank[], int num_in_suit[]) {
   }
 }
 
-void analyze_hand(int num_in_rank[], int num_in_suit[]) {
+void analyze_hand(void) {
   int num_consec = 0;
 
   straight = false;
@@ -195,19 +192,26 @@ void analyze_hand(int num_in_rank[], int num_in_suit[]) {
 void print_result(void) {
   if (straight && flush) {
     printf("Straight flush");
-  } else if (four) {
+  } else if (four)
+  {
     printf("Four of a kind");
-  } else if (three && pairs == 1) {
+  } else if (three && pairs == 1)
+  {
     printf("Full house");
-  } else if (flush) {
+  } else if (flush)
+  {
     printf("Flush");
-  } else if (straight) {
+  } else if (straight)
+  {
     printf("Straight");
-  } else if (three) {
+  } else if (three)
+  {
     printf("Three of a kind");
-  } else if (pairs == 2) {
+  } else if (pairs == 2)
+  {
     printf("Two pairs");
-  } else if (pairs == 1) {
+  } else if (pairs == 1)
+  {
     printf("Pair");
   } else {
     printf("High card");
