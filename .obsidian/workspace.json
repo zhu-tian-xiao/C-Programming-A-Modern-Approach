@@ -209,12 +209,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ch10.md",
+                "file": "ch13.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ch10"
+              "title": "ch13"
             }
           }
         ],
@@ -353,13 +353,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ch10.md",
+                "file": "ch13.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ch10"
+              "title": "Outline of ch13"
             }
           }
         ],
@@ -382,18 +382,20 @@
   },
   "active": "8211f80b7018bda7",
   "lastOpenFiles": [
+    "ch12.md",
+    "ch11.md",
+    "ch10.md",
+    "ch12/所有programming搞定",
+    "ch11/所有programming搞定",
+    "ch12/programming06.c",
+    "ch12/programming05.c",
+    "ch11/programming04",
+    "ch10/所有programming搞定",
+    "ch10/programming04",
     "ch10/test",
     "ch10/poker",
     "ch10/poker.c",
-    "ch9/所有programming搞定",
-    "ch8/所有programming搞定",
-    "ch10/guess",
-    "ch10/guess2",
-    "ch10/guess2.c",
-    "ch10/guess.c",
-    "ch10/stack.c",
     "ch9.md",
-    "ch9/programming07",
     "ch8.md",
     "ch19.md",
     "ch18.md",
@@ -401,14 +403,11 @@
     "ch16.md",
     "ch15.md",
     "ch13.md",
-    "ch11.md",
-    "ch10.md",
     "ch22.md",
     "ch4.md",
     "ch14.md",
     "ch7.md",
     "ch5.md",
-    "ch12.md",
     "ch3.md",
     "ch2.md",
     "README.md"

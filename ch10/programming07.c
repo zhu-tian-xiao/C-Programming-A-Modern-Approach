@@ -1,3 +1,4 @@
+// FINISH
 #include <stdio.h>
 #include <ctype.h>
 #define MAX_DIGITS 10
