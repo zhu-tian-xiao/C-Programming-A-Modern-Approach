@@ -1,3 +1,4 @@
+// FINISH
 #include <stdio.h>
 #include <string.h>
 #define WORD_LEN 20

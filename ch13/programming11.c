@@ -2,15 +2,19 @@
 #include <string.h>
 #define SENTENCE_LEN 50
 #define WORD_LEN 10
-
+void read_sentence(char sentence[], int n);
 double compute_average_word_length(const char* sentence);
 int main() {
+  printf("Enter a sentence: ");
   char sentence[SENTENCE_LEN + 2];
-  fgets(sentence, sizeof(sentence), stdin);
-  sentence[strcspn(sentence, "\n")] = '\0';
-  printf("%f\n", compute_average_word_length(sentence));
-}
+  read_sentence(sentence, sizeof sentence);
 
+  printf("Average word length: %.1f\n", compute_average_word_length(sentence));
+}
+void read_sentence(char sentence[], int n) {
+  fgets(sentence, n, stdin);
+  sentence[strcspn(sentence, "\n")] = '\0';
+}
 double compute_average_word_length(const char* sentence) {
   char word[WORD_LEN + 1];
 

@@ -3,7 +3,7 @@
         "stdio.h": "c",
         "stdbool.h": "c"
     },
-    // "editor.tabSize": 2,
+    "editor.tabSize": 2,
     // "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, BraceWrapping: { AfterControlStatement: false } }",
     // "[c]": {
     //     "editor.insertSpaces": true,

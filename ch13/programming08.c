@@ -4,12 +4,15 @@
 
 #include <ctype.h>
 #include <stdio.h>
-
+#define WORD_LEN 10
 int compute_scrabble_value(const char* word);
+int read_word(char word[], int n);
 int main() {
-    char word[] = "hel";
-    printf("%d\n", compute_scrabble_value(word));
-    
+  printf("Enter a word to compute scrabble value: ");
+  char word[WORD_LEN + 1];
+  read_word(word, WORD_LEN);
+
+  printf("%d\n", compute_scrabble_value(word));
 }
 
 int compute_scrabble_value(const char* word) {
@@ -62,4 +65,13 @@ int compute_scrabble_value(const char* word) {
     word++;
   }
   return sum;
+}
+
+int read_word(char word[], int n) {
+  char ch;
+  int nums_read = 0;
+  while ((ch = getchar()) != '\n' && nums_read < n) {
+    word[nums_read++] = ch;
+  }
+  return nums_read;
 }
