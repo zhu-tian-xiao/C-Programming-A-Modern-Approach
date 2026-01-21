@@ -6,14 +6,14 @@
 bool are_anagrams(const char* word1, const char* word2);
 
 void readWord(char* word) {
-  char buffer[WORD_LEN + 2];
+  char buffer[WORD_MAX_LEN + 2];
   fgets(buffer, sizeof(buffer), stdin);
   buffer[strcspn(buffer, "\n")] = '\0';
   strcpy(word, buffer);
 }
 int main() {
-  char word1[WORD_LEN + 1] = {0};
-  char word2[WORD_LEN + 1] = {0};
+  char word1[WORD_MAX_LEN + 1] = {0};
+  char word2[WORD_MAX_LEN + 1] = {0};
 
   for (;;) {
     printf("Enter first word: ");

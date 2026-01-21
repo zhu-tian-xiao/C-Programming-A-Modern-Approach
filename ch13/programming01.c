@@ -3,14 +3,14 @@
 #include <string.h>
 #define WORD_LEN 20
 int main() {
-  char smallestWord[WORD_LEN + 1];
-  char largestWord[WORD_LEN + 1] = {0};
+  char smallestWord[WORD_MAX_LEN + 1];
+  char largestWord[WORD_MAX_LEN + 1] = {0};
   // 初始化最小的和最大的word
-  for (int i = 0; i < WORD_LEN; i++) {
+  for (int i = 0; i < WORD_MAX_LEN; i++) {
     smallestWord[i] = 'z';
   }
 
-  char word[WORD_LEN + 1];
+  char word[WORD_MAX_LEN + 1];
 
   for (;;) {
     printf("Enter word: ");

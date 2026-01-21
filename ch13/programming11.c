@@ -16,7 +16,7 @@ void read_sentence(char sentence[], int n) {
   sentence[strcspn(sentence, "\n")] = '\0';
 }
 double compute_average_word_length(const char* sentence) {
-  char word[WORD_LEN + 1];
+  char word[WORD_MAX_LEN + 1];
 
   int count = 0;
   int consumed = 0;

@@ -9,8 +9,8 @@ int compute_scrabble_value(const char* word);
 int read_word(char word[], int n);
 int main() {
   printf("Enter a word to compute scrabble value: ");
-  char word[WORD_LEN + 1];
-  read_word(word, WORD_LEN);
+  char word[WORD_MAX_LEN + 1];
+  read_word(word, WORD_MAX_LEN);
 
   printf("%d\n", compute_scrabble_value(word));
 }
