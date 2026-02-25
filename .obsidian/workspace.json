@@ -249,12 +249,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ch16.md",
+                "file": "ch17.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ch16"
+              "title": "ch17"
             }
           }
         ],
@@ -393,13 +393,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ch16.md",
+                "file": "ch17.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ch16"
+              "title": "Outline of ch17"
             }
           }
         ],
@@ -422,22 +422,21 @@
   },
   "active": "d32823dd97ccbe2c",
   "lastOpenFiles": [
-    "ch16/p390/inventory",
-    "ch16/p390/readline.h",
-    "ch16/p390/readline.c",
-    "ch16/p390/inventory.c",
-    "ch16/p390",
-    "ch16/p390_myself2/readline.h",
-    "ch16/p390_myself2/readline.c",
-    "ch16/p390_myself2/part.h",
-    "ch16/p390_myself2/inventory.c",
-    "ch16/p390_myself2/part.c",
-    "ch16/p390_myself2/inventory",
+    "ch16.md",
+    "ch16/programming06",
+    "ch16/programming06.c",
+    "ch16/programming05",
+    "ch16/programming05.c",
+    "ch16/programming05.v",
+    "ch16/programming04/a.out",
+    "ch16/programming04/readline.h",
+    "ch16/programming04/readline.c",
+    "ch16/programming04/inventory.c",
+    "ch16/programming04/inventory",
     "ch12.md",
     "ch15.md",
     "ch14.md",
     "ch13.md",
-    "ch16.md",
     "ch8.md",
     "ch11.md",
     "ch10.md",
