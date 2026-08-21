@@ -1,11 +1,20 @@
 # C Fundamentals
 ## The General Form of a Simple Program
+Even the simplest C programs rely on three key language features:
+- Directives: editing commands that modify the program prior to compilation
+- functions: named blocks of executable code, of which main is an example
+- statements: commands to be performed when the program is run
 ### Directives
-Commands intended for the preprocessor are called directives.
+[[ch14]] 
+[[ch15]]
 ### Functions
-Def: library functions: belong to a “library” of functions that are supplied with the **compiler**
+Functions fall into two categories:
+- written by programmers
+- **library functions**
 ### Statement
 A statement is a **command** to be executed when the program runs.
+
+C requires that each statement end with a semicolon. (As with any good rule, there’s one exception: the compound statement)
 ## Variables and Assignment
 storage locations are called variables.
 ### Types
