@@ -78,7 +78,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "搜索"
             }
           },
           {
@@ -200,22 +200,25 @@
       "bases:新建数据库": false
     }
   },
-  "active": "73172381bee3ed1d",
+  "active": "c236ae38f9c6de9c",
   "lastOpenFiles": [
+    "ch2/exercise07.md",
+    "ch2/p24/exercise07.md",
+    "ch2/exercise08.md",
+    "ch2/exercise06",
+    "ch2/exercise06.c",
+    "ch2/exercise06.v",
+    "ch2/exercise05",
+    "ch2/exercise05.c",
+    "ch2/exercise05.v",
+    "ch2/exercise04.c",
+    "ch2/exercise02",
+    "ch2/exercise02.c",
+    "ch2/p24/celsius",
     "ch14.md",
     "ch2.md",
-    "ch2/Makefile",
     "ch1.md",
     "ch16.md",
-    "ch16/programming06",
-    "ch16/programming06.c",
-    "ch16/programming05",
-    "ch16/programming05.c",
-    "ch16/programming05.v",
-    "ch16/programming04/a.out",
-    "ch16/programming04/readline.h",
-    "ch16/programming04/readline.c",
-    "ch16/programming04/inventory.c",
     "ch12.md",
     "ch15.md",
     "ch13.md",
