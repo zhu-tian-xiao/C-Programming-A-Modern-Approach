@@ -1,7 +1,10 @@
 ## The printf Function
 The printf function is designed to display the contents of a string, known as the **format string**, with values possibly inserted at specified points in the string. When it’s called, printf must be supplied with the format string, followed by any values that are to be inserted into the string during printing:
 
-The format string may contain both ordinary characters and **conversion specifications**, which begin with the % character. The information that follows the % character specifies how the value is converted from its internal form (binary) to printed form (characters)
+The format string may contain both ordinary characters and **conversion specifications**, which begin with the % character. The information that follows the % character specifies how the value is converted from its internal form (binary) to printed form (characters).
+
+For example, the conversion specification `%d` specifies the printf is to convert an int value from binary to a string of decimal digits, while `%f` does the same for a float value.
+
 ```c
 #include <stdio.h>
 int main()
@@ -14,13 +17,15 @@ int main()
 
     float c = 1.0f;
     // 错误的写法 format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘double’
-    printf("%d", c);
+    printf("%d\n", c);
+    // warning: format ‘%f’ expects argument of type ‘double’, but argument 2 has type ‘int’
+    printf("%f\n", a);
 }
 ```
 ### Conversion Specifications
-a conversion specification can have the form %m.pX or %-m.pX
+A conversion specification can have the form %m.pX or %-m.pX, where m and p are integer constants and X is a letter.
 
-The minimum field width, m, specifies the minimum number of characters to print.
+The **minimum field width**, m, specifies the minimum number of characters to print.
 
 The meaning of the **precision**, p, isn’t as easily described, since it depends on the choice of X, the **conversion specifier**.
 

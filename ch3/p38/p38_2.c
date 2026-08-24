@@ -9,5 +9,7 @@ int main()
 
     float c = 1.0f;
     // 错误的写法 format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘double’
-    printf("%d", c);
+    printf("%d\n", c);
+    // warning: format ‘%f’ expects argument of type ‘double’, but argument 2 has type ‘int’
+    printf("%f\n", a);
 }

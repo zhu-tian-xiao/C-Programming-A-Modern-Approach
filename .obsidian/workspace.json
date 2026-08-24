@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ch2.md",
+                "file": "ch3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ch2"
+              "title": "ch3"
             }
           }
         ],
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ch2.md",
+                "file": "ch3.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -200,8 +200,14 @@
       "bases:新建数据库": false
     }
   },
-  "active": "c236ae38f9c6de9c",
+  "active": "73172381bee3ed1d",
   "lastOpenFiles": [
+    "ch3/p38/p38_2",
+    "ch3/p38/p38_2.c",
+    "ch3/p38/p38_1",
+    "ch3/p38/p38_1.c",
+    "ch3/p38",
+    "ch2.md",
     "ch2/exercise07.md",
     "ch2/p24/exercise07.md",
     "ch2/exercise08.md",
@@ -211,12 +217,7 @@
     "ch2/exercise05",
     "ch2/exercise05.c",
     "ch2/exercise05.v",
-    "ch2/exercise04.c",
-    "ch2/exercise02",
-    "ch2/exercise02.c",
-    "ch2/p24/celsius",
     "ch14.md",
-    "ch2.md",
     "ch1.md",
     "ch16.md",
     "ch12.md",
