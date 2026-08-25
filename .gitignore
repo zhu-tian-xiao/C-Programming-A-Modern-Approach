@@ -32,3 +32,29 @@ __pycache__/
 
 # Note: Gitignore matches paths/patterns, not file permission bits.
 # To stop tracking already-committed executables, remove them from the index (see commands below).
+
+# Additional patterns to catch common compiled/portable executables anywhere in the tree
+# (gitignore cannot match files by executable permission; the pre-commit hook below enforces that)
+a.out
+*.out
+*.exe
+*.bin
+
+# Common build artifacts and libraries
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+
+# Bin directories (some projects put executables here)
+bin/
+out/
+build/
+
+# If you compile inside chapter folders, ignore typical program outputs
+**/a.out
+**/*.out
+**/*.exe
+
+# End
