@@ -27,15 +27,35 @@ A conversion specification can have the form %m.pX or %-m.pX, where m and p are 
 
 The **minimum field width**, m, specifies the minimum number of characters to print.
 
-The meaning of the **precision**, p, isn’t as easily described, since it depends on the choice of X, the **conversion specifier**.
-
-这里展示了%d %f %e %g的用法，其中，%d是用来展示int的，%e  %f %g是用来展示floating-point number的
+The meaning of the **precision**, p, isn’t as easily described, since it depends on the choice of X, the **conversion specifier**. The most common conversion specifiers for numbers are: 
 
 - d — Displays an integer in decimal (base 10) form.
 - e — Displays a floating-point number in exponential format 
 - f — Displays a floating-point number in “fixed decimal” format, without an exponent.
 - g — Displays a floating-point number in either exponential format or fixed decimal format, depending on the number’s size.
+
+
+The g specifier is especially useful for displaying numbers whose size can’t be predicted when the program is written or that tend to vary widely in size.
 ## The scanf Function
+In many cases, a `scanf` format string will contain only conversion specification, as in the following example:
+```c
+int i, j;
+float x, y;
+
+scanf("%d%d%f%f", &i, &j, &x, &j);
+```
+scanf will read the line, converting its characters to the numbers they represent and then assign 1, -20, 0.3 and -4000.0 to i, j, x, and y, respectively.
+
+Calling scanf is a powerful but unforgiving way to read data. Many professional C programmers avoid scanf, instead reading all data in character form and converting it to numeric form later.
+### How scanf works
+As it searches for the beginning of a number, scanf ignores white-space characters (the space, horizontal and vertical tab, form-feed, and new-line characters). 
+
+see p44
+## Ordinary Characters in Format Strings
+see p45
+### Confusing printf with scanf
+see p46
+Although printf format strings often end with \n, putting a new-line character at the end of a scanf format string is usually a bad idea.
 ```c
 /* Adds two fractions */
 #include <stdio.h>
@@ -53,8 +73,21 @@ int main(void)
 }
 ```
 # Q & A
-- %i or %d
-- 不要使用%i
+- Q: %i or %d
+- A: 不要使用%i
 
-- If printf treats % as the beginning of a conversion specification, how can I print the % character?
-- `%%`
+- Q: If printf treats % as the beginning of a conversion specification, how can I print the % character?
+- A: `%%`
+
+- Q: The \t escape is supposed to cause printf to advance to the next tab stop. How do I know how far apart tab stops are?
+- A: You don’t. The effect of printing \t isn’t defined in C; it depends on what your operating system does when asked to print a tab character. Tab stops are typically eight characters apart, but C makes no guarantee.
+
+- Q: What does scanf do if it's asked to read a number but the user enters nonnumeric input?
+- A: see Chapter 22
+
+- Q: I don’t understand how scanf can “put back” characters and read them again later.
+- A: As it turns out, programs don’t read user input as it is typed. Instead, input is stored in a hidden buffer, to which scanf has access. It’s easy for scanf to put characters back into the buffer for subsequent reading. Chapter 22 discusses input buffering in more detail.
+
+- Q: What does scanf do if the user puts punctuation marks (commas, for example) between numbers?
+- `scanf("%d,%d", &i, &j);`
+
