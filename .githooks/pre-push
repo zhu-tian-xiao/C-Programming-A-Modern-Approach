@@ -1,0 +1,5 @@
+#!/bin/sh
+# Prevent pushing if repository contains tracked executable files
+ROOT_DIR=$(git rev-parse --show-toplevel 2>/dev/null || echo ".")
+"$ROOT_DIR/scripts/check_no_exec.sh" || exit 1
+exit 0
