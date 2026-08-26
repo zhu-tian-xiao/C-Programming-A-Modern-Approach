@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ch4.md",
+                "file": "ch5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ch4"
+              "title": "ch5"
             }
           }
         ]
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ch4.md",
+                "file": "ch5.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -187,17 +187,18 @@
   },
   "active": "73172381bee3ed1d",
   "lastOpenFiles": [
-    "ch2/p24/celsius",
-    "ch2/exercise04 copy.c",
-    "ch4/programming06",
-    "ch4/programming05",
-    "ch4/programming04",
-    "ch4/programming03",
-    "ch4/programming02",
-    "ch4/programming01",
-    "ch4/Makefile",
-    "ch4/ch3/所有programming都搞定了",
-    "ch4/ch3/programming06.c",
+    "ch5/bin/programming11",
+    "ch5/bin/programming10",
+    "ch5/bin/programming09",
+    "ch5/bin/programming08",
+    "ch5/bin/programming08_1",
+    "ch5/bin/programming07",
+    "ch5/bin/programming06",
+    "ch5/bin/programming05",
+    "ch5/bin/programming05_1",
+    "ch5/bin/programming04",
+    "ch5/bin/programming03",
+    "ch4.md",
     "ch3.md",
     "ch3/ch2/exercise08.md",
     "ch3/ch2/exercise07.md",
@@ -219,7 +220,6 @@
     "ch18.md",
     "ch17.md",
     "ch22.md",
-    "ch4.md",
     "ch7.md",
     "ch5.md",
     "README.md"
