@@ -8,35 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "176a57f811a356fb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ch2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ch2"
-            }
-          },
-          {
             "id": "73172381bee3ed1d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ch3.md",
+                "file": "ch4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ch3"
+              "title": "ch4"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -173,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ch3.md",
+                "file": "ch4.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -202,17 +187,18 @@
   },
   "active": "73172381bee3ed1d",
   "lastOpenFiles": [
-    "ch3/exercise",
-    "ch3/programming06",
-    "ch3/programming05",
-    "ch3/programming04",
-    "ch3/programming03",
-    "ch3/programming02",
-    "ch3/programming01",
-    "ch3/Makefile",
-    "ch3/ch2/所有programming都搞定了",
-    "ch3/ch2/programming08.c",
-    "ch3/ch2/programming08",
+    "ch2/p24/celsius",
+    "ch2/exercise04 copy.c",
+    "ch4/programming06",
+    "ch4/programming05",
+    "ch4/programming04",
+    "ch4/programming03",
+    "ch4/programming02",
+    "ch4/programming01",
+    "ch4/Makefile",
+    "ch4/ch3/所有programming都搞定了",
+    "ch4/ch3/programming06.c",
+    "ch3.md",
     "ch3/ch2/exercise08.md",
     "ch3/ch2/exercise07.md",
     "ch2.md",
@@ -236,7 +222,6 @@
     "ch4.md",
     "ch7.md",
     "ch5.md",
-    "ch3.md",
     "README.md"
   ]
 }

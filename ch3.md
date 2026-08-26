@@ -55,6 +55,7 @@ see p44
 see p45
 ### Confusing printf with scanf
 see p46
+
 Although printf format strings often end with \n, putting a new-line character at the end of a scanf format string is usually a bad idea.
 ```c
 /* Adds two fractions */
