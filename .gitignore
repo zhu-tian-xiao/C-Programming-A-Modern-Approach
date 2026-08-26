@@ -1,0 +1,10 @@
+# C/C++ object files
+*.o
+*.obj
+
+# Build directories
+build/
+bin/
+
+# GCC default executable
+a.out
