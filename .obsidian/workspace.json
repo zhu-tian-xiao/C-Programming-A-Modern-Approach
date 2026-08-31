@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ch6.md",
+                "file": "ch8.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ch6"
+              "title": "ch8"
             }
           }
         ],
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ch6.md",
+                "file": "ch8.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -202,29 +202,30 @@
   },
   "active": "66494e3f3318501f",
   "lastOpenFiles": [
-    "ch6/programming08.c",
-    "ch6/programming06",
-    "ch6/bin/programming12",
-    "ch6/bin/programming11",
-    "ch6/bin/programming10",
-    "ch6/bin/programming09",
-    "ch6/bin/programming08",
-    "ch6/bin/programming08_2",
-    "ch6/bin/programming07",
-    "ch6/bin/programming06",
-    "ch6/bin/programming05",
-    "ch5.md",
+    "ch8/p168/interest.c",
+    "ch8/p168",
+    "ch8/bin/repdigit",
+    "ch8/p166/repdigit.c",
+    "ch8/p166/p166_1.c",
+    "ch8/p166",
+    "ch8/bin/designated_initializers",
+    "ch8/p165/designated_initializers.c",
+    "ch8/p165",
+    "ch8/bin/reverse",
+    "ch8/p164/reverse.c",
+    "ch7.md",
     "ch6.md",
+    "ch5.md",
     "ch4.md",
     "ch3.md",
+    "ch2.md",
+    "ch1.md",
     "ch3/ch2/exercise08.md",
     "ch3/ch2/exercise07.md",
-    "ch2.md",
     "ch2/exercise07.md",
     "ch2/p24/exercise07.md",
     "ch2/exercise08.md",
     "ch14.md",
-    "ch1.md",
     "ch16.md",
     "ch12.md",
     "ch15.md",
@@ -236,7 +237,6 @@
     "ch19.md",
     "ch18.md",
     "ch17.md",
-    "ch22.md",
-    "ch7.md"
+    "ch22.md"
   ]
 }

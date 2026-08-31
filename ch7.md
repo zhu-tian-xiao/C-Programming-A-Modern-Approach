@@ -15,9 +15,10 @@ integer type: signed and unsigned
 | unsigned long int  | 0                          | 18,446,744,073,709,551,615 |
 
 ### Integer Types in C99
-long long和unsigned long long 都至少需要64位，这是标准要求
+C99 provides two additional standard integer types, long long int and unsigned long long int. ... Both long long types are required to have at least 64 bits wide.
 
 standard signed integer types: short int, int, long int, and long long int types (along with the signed char type)
+
 standard unsigned integer types: unsigned short int, unsigned int, unsigned long int, and unsigned long long int types (along with the unsigned char type and the `_Bool` type)
 ### Integer Constants
 The type of a decimal integer constant is normally int.
@@ -30,24 +31,20 @@ The type of a decimal constant with no suffix (U, u, L, l, LL, or ll) is the “
 int -> long int -> **long long int**
 
 octal or hexadecimal constant:
+
 int -> unsigned int -> long int -> unsigned long int -> long long int -> unsigned long long int
+
+Any suffix at the end of a constant changes the list of possible types.
+
+### Integer Overflow
+The behavior when integer oveflow occurs depends on whether the operands were signed or unsigned.
+
+When overflow occurs during an operation on signed integers, the program's behavior is undefined. 
+
+When overflow occurs during an operation on unsigned integers, though, the result is defined: we get the correct answer modulo $2^n$, where $n$ is the number of bits used to store the result. 
 ### Reading and Writing Integers
 When reading or writing an **unsigned integer**, use the letter u, o, or x instead of d in the conversion specification.
-```c
-#include <stdio.h>
-int main()
-{
-    unsigned int u;
-    scanf("%u", &u); /* reads u in base 10 */
-    printf("%u\n", u); /* writes u in base 10 */
-    // scanf("%o", &u);   /* reads u in base 8 */
-    // printf("%o\n", u); /* writes u in base 8 */
-    // printf("%d\n", u);
-    // scanf("%x", &u);   /* reads u in base 16 */
-    // printf("%x\n", u); /* writes u in base 16 */
-    // printf("%d\n", u);
-}
-```
+
 When reading or writing a short integer, put the letter h in front of d, o, u, or x:
 ```c
 short s;
@@ -66,6 +63,22 @@ long long ll;
 scanf("%lld", &ll);
 printf("%lld", ll);
 ```
+### PROGRAM Summing a Series of Numbers(Revisited)
+```c
+#include <stdio.h>
+int main() {
+  printf("This program sums a series of integers.\n");
+  printf("Enter integers (0 to terminate): ");
+  int input;
+  int sum = 0;
+  do {
+    scanf("%d", &input);
+    sum += input;
+  } while (input != 0);
+
+  printf("The sum is: %d\n", sum);
+}
+```
 ## Floating Types
 
 | type        | precision                         |
@@ -73,8 +86,34 @@ printf("%lld", ll);
 | float       | Single-precision floating-point   |
 | double      | Double-precision floating-point   |
 | long double | Extended-precision floating-point |
+### Floating Constants
+57.0
+57.
+57.0e0
+57E0
+5.7e1
+5.7e+1
+.57e2
+570.e-1
+### Reading and Writing Floating-Point Numbers
+When reading a value of type double, put the letter l in front of e, f, or g:
+
+```c
+double d;
+scanf("%lf", &d);
+```
+Note: Use l only in a scanf format string, not a printf string. In a printf format string, the e, f, and g conversions can be used to write either float or double values.
+
+When reading or writing a value of type long double, put the letter L in front of e, f, or g:
+
+```c
+long double ld;
+scanf("%Lf", &ld);
+printf("Lf", ld);
+```
 ## Character Types
-在C，character被视为一种小的int
+### Operations on Characters
+C treat characters as small integers.
 ### Signed and Unsigned Characters
 当character被用作一种小的int，unsigned char和signed char才有意义
 
@@ -89,6 +128,16 @@ C99的情况：
 - floating types
 	- real floating types: float, double, long double
 	- complex types: float `_Complex`, double `_Complex`, long double `_Complex`
+### Escape Sequences
+There are 2 kinds of escape sequences: character escapes and numeric escapes.
+
+Character escapes are handy, but they have a problem:
+- the list of character escapes doesn't include all nonprinting ASCII characters, just the most common.
+- Character escapes are also useless for representing characters beyond the basic 128 ASCII characters
+
+- octal escape sequence
+- hexadecimal escape sequence
+
 ### Character-Handling Functions
 比如说toupper
 ### Reading and Writing Characters using scanf and printf
@@ -96,31 +145,37 @@ C99的情况：
 ```c
 scanf(" %c", &ch); /* skips white space, then reads ch */
 ```
-### Determining the Length of a Message
+### Reading and Writing Characters using getchar and putchar
+Using getchar and putchar saves time when the program is executed for 2 reasons:
+- they're much simpler then scanf and printf
+- getchar and putchar are usually implemented as macros for additional speed.
+### PROGRAM Determining the Length of a Message
 ```C
 #include <stdio.h>
-int main()
-{
-    printf("Enter a message: ");
-    int count = 0;
-    while (getchar() != '\n')
-    {
-        count++;
-    }
-    printf("Your message was %d character(s) long.\n", count);
+int main() {
+  int length = 0;
+
+  printf("Enter a message: ");
+
+  while (getchar() != '\n') {
+    length++;
+  }
+  printf("Your message was %d character(s) long.\n", length);
 }
 ```
 ## Type conversions
-implicit conversions
+Computers tend to be more restrictive then C when it comes to arithmetic. For a computer to perform an arithemetic operation, the operands must usually be of the same size (the same number of bits) and to be stored in the same way.
 
-explicit conversions
+- implicit conversions
+- explicit conversions
 
 Implicit conversions are performed in the following situations:
 - When the operands in an arithmetic or logical expression don’t have the same type. (C performs what are known as the **usual arithmetic conversions**.)
 - When the type of the expression on the right side of an **assignment** doesn’t match the type of the variable on the left side.
 - When the type of an argument in a function call doesn’t match the type of the corresponding parameter.
 - When the type of the expression in a return statement doesn’t match the function’s return type.
-在算数表达式/逻辑表达式、赋值表达式、函数调用、函数返回时可能发生隐式转换
+
+### The Usual Arithmetic Conversions
 
 promotion： convert a character or short integer to type int
 
@@ -128,12 +183,12 @@ rules:
 - The type of either operand is a floating type: float -> double -> long double
 - Neither operand type is a floating type: int -> unsigned int -> long int -> unsigned long int
 
-这里注意不要将unsigned int和signed int混合使用，因为int会被转换为unsigned int，如果int是负数，会造成意外情况
-
-
+see p144
 
 ### Conversion During Assignment
+see p145
 ### Implicit Conversions in C99
+see p146
 ### Casting
 ```c
 ( type-name ) expression
@@ -143,10 +198,28 @@ rules:
 typedef int Bool;
 ```
 ### Advantages of Type Definitions
+```c
+typedef float Dollars;
+typedef double Dollars;
+```
 ### Type Definitions and Portability
+In C99, the `stdint.h` header uses typedef to define names for integer types with a particular number of bits. For example, `int32_t` is a signed integer type with exactly 32 bits.
+
 ## The sizeof Operator
+The `sizeof` **operator** allows a program to determine how much memory is required to store values of a particular type. The value of the expression
+```c
+sizeof (type-name)
+```
+is an unsigned integer representing the number of bytes required to store a value belonging to type name.
+
+Printing a sizeof value requires care, because the type of a sizeof expression is an implementation-defined type named `size_t`. In C89, it's best to convert the value of the expression to a known type before printing it. `size_t` is guaranteed to be an unsigned integer type, so it's safest to cast a sizeof expression to unsigned long(the largest of C89's unsigned types) and then print it using the `%lu` conversions:
+
 ```c
 printf("Size of int: %lu\n", (unsigned long) sizeof(int));
+```
+In C99, the `size_t` can be larger than unsigned long. However, the printf function in C99 is capable of displaying `size_t` values directly, without needing a cast. The trick is to use the letter z in the conversion specification, followed by one of the usual integer codes (typically u): 
+```c
+printf("Size of int: %zu\n", sizeof(int));
 ```
 # Q & A
 - Section 7.1 says that %o and %x are used to write unsigned integers in octal and hex notation. How do I write ordinary (signed) integers in octal or hex?

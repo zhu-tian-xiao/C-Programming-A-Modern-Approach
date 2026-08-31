@@ -1,6 +1,9 @@
 # Arrays
+So far, the only we've seen are **scalar**: capable of holding a single data item. C also supports **aggregate** variables, which can store collections of values. There are two kinds of aggregates in C: arrays and structures.
 ## One-Dimensional Arrays
 An array is a data structure containing a number of data values, all of which have the same type. These values, known as elements, can be individually selected by their position within the array.
+
+...; the length of the array can be specified by any (integer) constant expression.
 ### Array Subscripting
 Expressions of the form `a[i] `are lvalues
 ```c
@@ -8,7 +11,7 @@ a[0] = 1;
 printf("%d\n", a[5]);
 ++a[i];
 ```
-### Reversing a Series of Numbers
+###  Reversing a Series of Numbers #program
 ```c
 #include <stdio.h>
 #define N 10
@@ -26,11 +29,24 @@ int main()
 }
 ```
 ### Array Initialization
-The most common form of array initializer is a list of constant expressions enclosed in braces and separated by commas:
 ```c
 int a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 ```
-### Checking a Number for Repeated Digits
+
+```c
+int a[10] = {1, 2, 3};
+```
+
+```c
+int a[10] = {0};
+```
+
+```c
+int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+```
+### Designated Initializers
+see p165
+### Checking a Number for Repeated Digits #program
 ```c
 #include <stdio.h>
 #include <stdbool.h> /* C99 only */
@@ -61,7 +77,7 @@ int main()
 ```c
 sizeof(a) / sizeof(a[0])
 ```
-### Computing Interest
+### Computing Interest #program
 ```c
 /* Prints a table of compound interest */
 #include <stdio.h>
