@@ -1,3 +1,5 @@
+/* Deals a random hand of cards */
+
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -5,17 +7,20 @@
 
 #define NUM_SUITS 4
 #define NUM_RANKS 13
+
 int main(void) {
   bool in_hand[NUM_SUITS][NUM_RANKS] = {false};
   const char rank_code[] = {'2', '3', '4', '5', '6', '7', '8',
                             '9', 't', 'j', 'q', 'k', 'a'};
   const char suit_code[] = {'c', 'd', 'h', 's'};
+
   srand((unsigned)time(NULL));
-  printf("Enter number of cards in hand: ");
 
   int num_cards;
+  printf("Enter number of cards in hand: ");
   scanf("%d", &num_cards);
-  printf("your hand:");
+
+  printf("Your hand:");
   int suit;
   int rank;
   while (num_cards > 0) {

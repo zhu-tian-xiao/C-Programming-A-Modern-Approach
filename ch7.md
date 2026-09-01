@@ -226,26 +226,28 @@ printf("Size of int: %zu\n", sizeof(int));
 - You can use %o and %x to print a signed integer as long as its value isn’t negative. These conversions cause printf to treat a signed integer as though it were unsigned; in other words, printf will assume that the sign bit is part of the number’s magnitude. As long as the sign bit is 0, there’s no problem. If the sign bit is 1, printf will print an unexpectedly large number.
 ```c
 #include <stdio.h>
-int main()
-{
-    int x = 1;
-    printf("%x\n", x);
-    int y = -1;
-    printf("%x\n", y);
+int main() {
+  int x = 1;
+  // 1
+  printf("%x\n", x);
+  int y = -1;
+  // ffffffff
+  printf("%x\n", y);
 }
 
-zhu@zhu:/mnt/d/Project/Tutorial/c/ch7$ gcc p152_1.c -o p152_1
-zhu@zhu:/mnt/d/Project/Tutorial/c/ch7$ ./p152_1
-1
-ffffffff
 ```
-解决方法：
+- Q: But what if the number is negative? How can I write it in octal or hex?
+- A: 
 ```c
 if (i < 0)
 printf("-%x", -i);
 else
 printf("%x", i);
 ```
+- Q: Why are floating constants stored in double form rather than float form?
+- For historical reasons.
+
+
 - Why do we use %lf to read a double value but %f to print it?
 
 

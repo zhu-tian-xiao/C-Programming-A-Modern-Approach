@@ -1,45 +1,43 @@
-// FINISH
 #include <stdio.h>
 
-int main(void) {
-  int i, j, temp_total, high, low;
-  int n[5][5];
+#define NUM_QUIZZES  5
+#define NUM_STUDENTS 5
 
-  for (i = 0; i < 5; i++) {
-    printf("Enter quiz grades for student %d: ", i + 1);
+int main(void)
+{
+  int grades[NUM_STUDENTS][NUM_QUIZZES];
+  int high, low, quiz, student, total;
 
-    for (j = 0; j < 5; j++) {
-      scanf("%d", &n[i][j]);
-    }
+  for (student = 0; student < NUM_STUDENTS; student++) {
+    printf("Enter grades for student %d: ", student + 1);
+    for (quiz = 0; quiz < NUM_QUIZZES; quiz++)
+      scanf("%d", &grades[student][quiz]);
   }
 
-  printf("\n");
-
-  for (i = 0; i < 5; i++) {
-    printf("\nTotal and average score for student %d: ", i + 1);
-    temp_total = 0;
-    for (j = 0; j < 5; j++) {
-      temp_total += n[i][j];
-    }
-    printf("%d %.2f", temp_total, (double)temp_total / 5);
+  printf("\nStudent  Total  Average\n");
+  for (student = 0; student < NUM_STUDENTS; student++) {
+    printf("%4d      ", student + 1);
+    total = 0;
+    for (quiz = 0; quiz < NUM_QUIZZES; quiz++)
+      total += grades[student][quiz];
+    printf("%3d     %3d\n", total, total / NUM_QUIZZES);
   }
 
-  printf("\n");
-
-  for (i = 0; i < 5; i++) {
-    printf("\nAverage, high and low scores for quiz %d: ", i + 1);
-    temp_total = 0;
-    high = low = n[0][i];
-
-    for (j = 0; j < 5; j++) {
-      temp_total += n[j][i];
-      if (n[j][i] > high) high = n[j][i];
-      if (n[j][i] < low) low = n[j][i];
+  printf("\nQuiz  Average  High  Low\n");
+  for (quiz = 0; quiz < NUM_QUIZZES; quiz++) {
+    printf("%3d     ", quiz + 1);
+    total = 0;
+    high = 0;
+    low = 100;
+    for (student = 0; student < NUM_STUDENTS; student++) {
+      total += grades[student][quiz];
+      if (grades[student][quiz] > high)
+        high = grades[student][quiz];
+      if (grades[student][quiz] < low)
+        low = grades[student][quiz];
     }
-    printf("%f %d %d", (double)temp_total / 5, high, low);
+    printf("%3d    %3d   %3d\n", total / NUM_STUDENTS, high, low);
   }
-
-  printf("\n");
 
   return 0;
 }
