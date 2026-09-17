@@ -13,24 +13,24 @@ void stack_underflow()
 {
     puts("Under flow");
 }
-void makeEmpty()
+void make_empty()
 {
     top = 0;
 }
 
-bool isEmpty()
+bool is_empty()
 {
     return top == 0;
 }
 
-bool isFull()
+bool is_full()
 {
     return top == STACK_SIZE;
 }
 
 void push(int i)
 {
-    if (isFull())
+    if (is_full())
     {
         stack_overflow();
     }
@@ -42,7 +42,7 @@ void push(int i)
 
 int pop()
 {
-    if (isEmpty())
+    if (is_empty())
     {
         stack_underflow();
     }

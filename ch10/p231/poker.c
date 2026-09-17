@@ -31,13 +31,14 @@ void read_cards(void) {
   int rank, suit;
   bool bad_card;
   int cards_read = 0;
+
+  // initialize all array to 0
   for (int rank = 0; rank < NUM_RANKS; rank++) {
     num_in_rank[rank] = 0;
     for (int suit = 0; suit < NUM_SUITS; suit++) {
       cards_exists[rank][suit] = false;
     }
   }
-
   for (int suit = 0; suit < NUM_SUITS; suit++) {
     num_in_suit[suit] = 0;
   }
@@ -153,7 +154,7 @@ void analyze_hand(void) {
   three = false;
   pairs = 0;
 
-  // check for flush
+  // check for flush 
   for (int suit = 0; suit < NUM_SUITS; suit++) {
     if (num_in_suit[suit] == NUM_CARDS) {
       flush = true;
@@ -168,21 +169,18 @@ void analyze_hand(void) {
   for (; rank < NUM_RANKS && num_in_rank[rank] > 0; rank++) {
     num_consec++;
   }
-
   if (num_consec == NUM_CARDS) {
     straight = true;
     return;
   }
-
+  // check for three-of-a-kind, two pairs, pair, high card
   for (rank = 0; rank < NUM_RANKS; rank++) {
     if (num_in_rank[rank] == 4) {
       four = true;
     }
-
     if (num_in_rank[rank] == 3) {
       three = true;
     }
-
     if (num_in_rank[rank] == 2) {
       pairs++;
     }
