@@ -17,6 +17,7 @@ void read_cards(void);
 void analyze_hand(void);
 void print_result(void);
 void print_array(int array[], int n);
+
 int main(void) {
   for (;;) {
     read_cards();
@@ -154,7 +155,7 @@ void analyze_hand(void) {
   three = false;
   pairs = 0;
 
-  // check for flush 
+  // check for flush
   for (int suit = 0; suit < NUM_SUITS; suit++) {
     if (num_in_suit[suit] == NUM_CARDS) {
       flush = true;
@@ -190,26 +191,19 @@ void analyze_hand(void) {
 void print_result(void) {
   if (straight && flush) {
     printf("Straight flush");
-  } else if (four)
-  {
+  } else if (four) {
     printf("Four of a kind");
-  } else if (three && pairs == 1)
-  {
+  } else if (three && pairs == 1) {
     printf("Full house");
-  } else if (flush)
-  {
+  } else if (flush) {
     printf("Flush");
-  } else if (straight)
-  {
+  } else if (straight) {
     printf("Straight");
-  } else if (three)
-  {
+  } else if (three) {
     printf("Three of a kind");
-  } else if (pairs == 2)
-  {
+  } else if (pairs == 2) {
     printf("Two pairs");
-  } else if (pairs == 1)
-  {
+  } else if (pairs == 1) {
     printf("Pair");
   } else {
     printf("High card");
