@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ch11.md",
+                "file": "ch13.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ch11"
+              "title": "ch13"
             }
           }
         ],
@@ -173,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ch11.md",
+                "file": "ch13.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -202,18 +202,20 @@
   },
   "active": "66494e3f3318501f",
   "lastOpenFiles": [
+    "ch12.md",
+    "ch13.md",
+    "ch12/bin/reverse",
+    "ch12/bin",
+    "ch12/p264/reverse.c",
+    "ch12/p264",
+    "ch11.md",
     "ch11/bin/maxmin",
     "ch11/bin",
     "ch11/p250/maxmin.c",
     "ch11/p250/max_min.c",
     "ch11/p250/p250_1.c",
     "ch11/p250",
-    "ch11/maxmin.c",
     "ch10.md",
-    "ch10/bin/poker",
-    "ch10/p231/poker.c",
-    "ch10/p231",
-    "ch10/bin/main",
     "ch9.md",
     "ch4.md",
     "ch8.md",
@@ -230,10 +232,7 @@
     "ch2/exercise08.md",
     "ch14.md",
     "ch16.md",
-    "ch12.md",
     "ch15.md",
-    "ch13.md",
-    "ch11.md",
     "ch19.md",
     "ch18.md",
     "ch17.md",
